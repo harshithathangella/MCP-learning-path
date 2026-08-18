@@ -127,11 +127,4 @@ def run_agent_sync(
             raise
 
     # Run in new event loop
-    """loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    try:
-        return loop.run_until_complete(_run())
-    finally:
-        loop.close()"""
     return asyncio.run(_run())
-
