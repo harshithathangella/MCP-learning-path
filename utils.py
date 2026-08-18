@@ -31,7 +31,7 @@ async def setup_agent_with_tools(
     """
     try:
         if progress_callback:
-            progress_callback("Setting up agent with tools... ✅")
+            progress_callback("Setting up agent with tools... ✅") #updates streamlit progress UI
         
         # Initialize tools configuration with mandatory YouTube
         tools_config = {
