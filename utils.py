@@ -98,7 +98,7 @@ def run_agent_sync(
     """
     async def _run():
         try:
-            agent = await setup_agent_with_tools(
+            agent = await setup_agent_with_tools(   #set up the agent
                 google_api_key=google_api_key,
                 youtube_pipedream_url=youtube_pipedream_url,
                 drive_pipedream_url=drive_pipedream_url,
@@ -106,10 +106,10 @@ def run_agent_sync(
                 progress_callback=progress_callback
             )
             
-            # Combine user goal with prompt template
+            # Combine user goal by creating prompt template  
             learning_path_prompt = "User Goal: " + user_goal + "\n" + user_goal_prompt
             
-            if progress_callback:
+            if progress_callback: #calls agent
                 progress_callback("Generating your learning path...")
             
             # Run the agent
