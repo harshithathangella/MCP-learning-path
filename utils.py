@@ -33,7 +33,7 @@ async def setup_agent_with_tools(
         if progress_callback:
             progress_callback("Setting up agent with tools... ✅") #updates streamlit progress UI
         
-        # Initialize tools configuration with mandatory YouTube
+        #MCP server Configuration
         tools_config = {
             "youtube": {
                 "url": youtube_pipedream_url,
