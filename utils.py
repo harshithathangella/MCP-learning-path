@@ -2,13 +2,13 @@ import warnings
 warnings.filterwarnings("ignore", message="Key '\\$schema' is not supported in schema, ignoring")
 warnings.filterwarnings("ignore", message="Key 'additionalProperties' is not supported in schema, ignoring")
 
-from langchain_core.messages import HumanMessage
-from langchain_core.runnables import RunnableConfig
-from prompt import user_goal_prompt
-from langgraph.prebuilt import create_react_agent
-from langchain_mcp_adapters.client import MultiServerMCPClient
-from langchain_google_genai import ChatGoogleGenerativeAI
-from typing import Optional, Tuple, Any, Callable
+from langchain_core.messages import HumanMessage #represents user's message while sending to agent
+from langchain_core.runnables import RunnableConfig #configures execution behaviour
+from prompt import user_goal_prompt #instructions from prompt.py
+from langgraph.prebuilt import create_react_agent 
+from langchain_mcp_adapters.client import MultiServerMCPClient  #client connects multiple MCP servers
+from langchain_google_genai import ChatGoogleGenerativeAI #model
+from typing import Optional, Tuple, Any, Callable 
 import asyncio
 
 cfg = RunnableConfig(recursion_limit=100)
